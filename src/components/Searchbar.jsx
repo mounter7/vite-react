@@ -6,7 +6,7 @@ const Searchbar = ({ setResults }) => {
     const [input, setInput] = useState("")
 
     const fetchData = (value) => {
-        fetch('https://mounter7.github.io/vite-react/Data.json')
+        fetch('Data.json')
             .then(response => response.json())
             .then(data => {
                 const results = data.filter(user => {

@@ -6,7 +6,7 @@ const Searchbar = ({ setResults }) => {
     const [input, setInput] = useState("")
 
     const fetchData = (value) => {
-        fetch('Data.json')
+        fetch('https://mounter7.github.io/vite-react/Data.json')
             .then(response => response.json())
             .then(data => {
                 const results = data.filter(user => {
@@ -34,7 +34,7 @@ const Searchbar = ({ setResults }) => {
             <FaSearch id="search-icon" className='text-xl text-slate-100 bg-[#000] h-[40px] py-3 w-[80px] cursor-pointer' />
 
         </div>
-        
+
     )
 }
 

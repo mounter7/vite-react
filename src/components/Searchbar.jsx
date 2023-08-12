@@ -10,7 +10,7 @@ const Searchbar = ({ setResults }) => {
             .then(response => response.json())
             .then(data => {
                 const results = data.filter(user => {
-                    return value && user && user.age && user.name.toLowerCase().includes(value)
+                    return value && user && user.age && user.name.toLowerCase().includes(value.toLowerCase())
                 })
                 setResults(results)
             })
